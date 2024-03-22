@@ -1,0 +1,16 @@
+version: '3.8' # specify docker-compose version
+
+services: 
+  autogenstudio:
+    container_name: autogenstudio
+    build: . # specify container build context directory
+    volumes:
+      - autogenstudio_data:/home/autogenstudio/.autogenstudio
+    environment: 
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+    ports: 
+      - "8081:8081" # bind the host port with the container port
+    restart: unless-stopped
+
+volumes:
+  autogenstudio_data:

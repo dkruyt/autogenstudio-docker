@@ -22,7 +22,7 @@ These instructions will guide you to get a copy of the project up and running on
     ```
 3. Build and run the Docker container:
     ```bash
-    docker-compose up -d --build
+    docker compose up -d --build
     ```
 
 By default, the application will be accessible at [http://localhost:8081](http://localhost:8081).
